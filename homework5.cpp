@@ -69,6 +69,7 @@ private:
 
 int main() {
 	// 아래 클래스변수 mop 은 동적 할당이므로 heap영역에 할당되는 부분. heap영역에 할다되므로 포인터 변수로만 접근이 가능.
+	// 추가로 동적할당을 하면 메모리의 주소를 반환하기 떄문에 포인터 변수를 사용해야한다.
 	Monster* mop = new Monster("goblin", 100, 10);
 	string mopName = mop->getName();
 	int mopHp = mop->getHealth();
