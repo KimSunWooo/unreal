@@ -114,5 +114,17 @@
     <ClCompile Include="construvtor3.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="construvtor4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="inheritance.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="homework6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>
