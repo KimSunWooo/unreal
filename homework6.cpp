@@ -61,15 +61,30 @@ public:
 		}
 	}
 
+	void PrintPublic() {
+		cout << "여기는 부모 클래스의 public 영역" << endl;
+	}
+	
+
+protected:
+	void PrintProtected() {
+		cout << "여기는 부모 클래스의 protected 영역" << endl;
+	}
+
 private:
 	int health;
 	string name;
 	string kind;
 	int atk;
 	int def;
+
+	void PrintPrivate() {
+		cout << "여기는 부모 클래스의 private 영역" << endl;
+	}
 };
 class Monster : public Unit
 {
+	
 public:
 	Monster(const string n, const string k, int h, int a, int d) : Unit(n, k, h, a, d) {
 		
@@ -91,6 +106,59 @@ private:
 
 };
 
+class test1 : private Unit {
+	public : 
+	test1(const string n, const string k, int h, int a, int d) : Unit(n, k, h, a, d) {
+		
+	}
+
+	void PrintPublic() {
+		Unit::PrintPublic();
+	}
+	void PrintProtected() {
+		Unit::PrintProtected();
+	}
+	void PrintPrivate() {
+		Unit::PrintPrivate();
+	}
+
+	private :
+		
+};
+
+class test2 : protected Unit {
+	public : 
+	test2(const string n, const string k, int h, int a, int d) : Unit(n, k, h, a, d) {
+
+	}
+
+	void PrintPublic() {
+		Unit::PrintPublic();
+	}
+	void PrintProtected() {
+		Unit::PrintProtected();
+	}
+	void PrintPrivate() {
+		Unit::PrintPrivate();
+	}
+};
+
+class test3 : public Unit {
+public:
+	test3(const string n, const string k, int h, int a, int d) : Unit(n, k, h, a, d) {
+
+	}
+
+	void PrintPublic() {
+		Unit::PrintPublic();
+	}
+	void PrintProtected() {
+		Unit::PrintProtected();
+	}
+	void PrintPrivate() {
+		Unit::PrintPrivate();
+	}
+};
 
 
 
@@ -116,4 +184,9 @@ int main() {
 	me = nullptr;
 	pSkill = nullptr;
 	mSkill = nullptr;
+
+	test1* t1 = new test1("테스트1", "테스트1", 1, 2, 3);
+	test2* t2 = new test2("테스트2", "테스트2", 1, 2, 3);
+	test3* t3 = new test3("테스트3", "테스트3", 1, 2, 3);
+	
 }

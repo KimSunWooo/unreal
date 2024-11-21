@@ -123,6 +123,12 @@
     <ClCompile Include="homework6.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="overrideing.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Binding.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

@@ -61,9 +61,14 @@ public:
 		cout << name << "이" << damage << "만큼 데미지를 먹었다 남은 체력" << health << endl;
 	}
 private:
+	void PrintPrivate() {
+		cout << "여기는 부모 클래스의 private 영역" << endl;
+	}
 
 protected :
-	
+	void PrintProtected() {
+		cout << "여기는 부모 클래스의 protected 영역" << endl;
+	}
 };
 
 // 상속
